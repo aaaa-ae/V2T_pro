@@ -1,14 +1,9 @@
-# 先忽略根目录下所有内容
+# Ignore all files in root directory
 /*
 
-# 但保留 gitignore 自己
+# Keep .gitignore itself
 !.gitignore
 
-# 再单独放行根目录下这 5 个 .py 文件
-#!/run_v2t_demo_adapter.py
-#!/style_encoder.py
-#!/train_style_encoder.py
-#!/train_v2t_adapter_orpo.py
-#!/train_v2t_adapter_sft.py
-
-!/docs
+# Keep only the docs folder and all its contents
+!docs/
+!*
