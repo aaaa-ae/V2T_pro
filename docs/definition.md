@@ -1,8 +1,8 @@
 ### 问题定义
 #### 🧱 第 1 层（核心研究问题，只有这一层算 idea）
 
-能不能学习一个 task-adaptive、可解释的 persona，
-作为黑盒 LLM 的中间控制抽象，并且通过偏好来评价它是否有用？
+能不能学习一个 user-task-adaptive、可解释的 persona，
+作为黑盒 LLM 的中间控制抽象？
 
 这一层里只有 4 个关键词：
 
@@ -12,7 +12,7 @@
 
 3、black-box compatible
 
-4、preference-evaluated（不是 supervised label）
+4、SFT+ORPO（需要知识蒸馏）
 
 👉 这就是你的论文“灵魂”，一句话能讲清楚。
 
@@ -20,11 +20,13 @@
 
 这里你可以非常“工程化”，完全不用内疚：
 
-1、encoder：轻量 Transformer
+1、encoder：轻量 Transformer encoder（2–4 层） + attention pooling（query-conditioned）
 
-2、decoder：Qwen2-0.5B
+2、decoder：Qwen2.5-1.5B-Instruct
 
-3、teacher：Qwen / GPT-4o
+3、teacher：Qwen2.5-7B-Instruct（目标是得到persona/explanation 语言结构）
+
+4、中心黑盒：GPT-4o-mini
 
 4、preference learning：ORPO
 
