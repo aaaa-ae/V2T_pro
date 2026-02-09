@@ -6,3 +6,4 @@
 
 # Keep only the docs folder and all its contents
 !docs/
+!*
