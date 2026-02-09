@@ -183,10 +183,10 @@ if __name__ == "__main__":
 
     # 构造和之前类似的 history
     history = """User: 解释一下 LoRA 是什么？
-Assistant: LoRA 在冻结大模型参数的前提下加入低秩矩阵，从而大幅减少训练开销。
-User: DPO 和 PPO 简单说说区别？最好条理清晰一点。
-Assistant: 1. PPO 需要 actor-critic；2. DPO 直接在偏好数据上优化；3. 实现更简单。
-"""
+    Assistant: LoRA 在冻结大模型参数的前提下加入低秩矩阵，从而大幅减少训练开销。
+    User: DPO 和 PPO 简单说说区别？最好条理清晰一点。
+    Assistant: 1. PPO 需要 actor-critic；2. DPO 直接在偏好数据上优化；3. 实现更简单。
+    """
 
     q1 = "Explain the attention mechanism in Transformer."
     q2 = "北京今天 10 度左右，上课适合怎么穿？"
